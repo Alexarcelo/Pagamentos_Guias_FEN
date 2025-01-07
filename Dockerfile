@@ -22,4 +22,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copie todo o conteúdo do diretório local para o contêiner
 COPY . .
 
-CMD ["streamlit", "run", "Pagamentos_Fornecedores.py", "--server.port=8103"]
+EXPOSE 8104
+
+CMD ["streamlit", "run", "Pagamentos_Fornecedores.py", "--server.port=8104"]
